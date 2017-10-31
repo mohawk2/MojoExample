@@ -7,3 +7,6 @@ requires 'Time::Duration'              => 0;
 requires 'File::Slurp'                 => 0;
 requires 'SQL::Translator'             => 0;
 requires 'DBIx::Class::Schema::Loader' => 0;
+requires 'Mojolicious::Plugin::GraphQL' => '0.06'; # convert plugin
+requires 'GraphQL' => '0.20'; # convert plugin
+requires 'GraphQL::Plugin::Convert::DBIC' => '0.03'; # plugin gives all 3

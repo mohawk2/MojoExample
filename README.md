@@ -1,5 +1,22 @@
 <img src="https://cloud.githubusercontent.com/assets/63439/3788824/8ef74550-1a7a-11e4-9313-4a4009bc859a.png" />
 
+# Purpose of this GraphQL-orientated fork
+
+To demonstrate GraphQL on Mojolicious working with a DBIx::Class database.
+Follow the GraphiQL link and try this query:
+
+```
+{
+  blog(id: [1, 2]) {
+    id
+    title
+    tags {
+      name
+    }
+  }
+}
+```
+
 # Purpose
 
 - [Introduction](http://tempi.re/mojolicious-full-and-lite-apps-understanding-the-difference)

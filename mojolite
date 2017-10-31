@@ -77,6 +77,11 @@ get '/photos/:id' => sub {
   $self->render(template => 'photos/show', photo => $photo);
 };
 
+plugin GraphQL => {
+  convert => [ 'DBIC', sub { app->db } ],
+  graphiql => 1,
+};
+
 app->start;
 __DATA__
 
@@ -114,6 +119,7 @@ __DATA__
   % }
 
   <ul class="toc">
+    <li><a href="/graphql">GraphiQL</a></li>
     <li><a href="/blogs">Blog</a></li>
     <li><a href="/photos">Photos</a></li>
   </ul>
