@@ -14,6 +14,14 @@ sub startup {
 
   $self->helper(db => sub { $self->app->schema });
 
+  # register GraphQL plugin
+  $self->plugin(
+    GraphQL => {
+      convert => [ 'DBIC', sub { $self->db } ],
+      graphiql => 1,
+    }
+  );
+  
   # Routes
   my $r = $self->routes;
 
